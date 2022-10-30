@@ -56,7 +56,9 @@ def raja():
         print("Subtraction")
         print("Multiplication")
         print("Division")
+        
         operation = input("what do you want to do:")
+
         def main2Addition():
             print(f"{a} + {b} = {a+b}")
         def main2Subtraction():
@@ -64,7 +66,7 @@ def raja():
         def main2Multiplication():
             print(f"{a} x {b} = {a*b}")
         def main2Division():
-            print(f"{a} ÷ {b} = {a/b}")
+            print(f"{a} ÷? {b} = {a/b}")
 
 
         if operation == "Addition":
@@ -77,6 +79,22 @@ def raja():
             main2Division()
         else:
             print("Pls write from the given")
-            main2()  
-    main2() 
+            main2()
+
+    def final():
+        global fin
+        print("yes")
+        print("no")
+        fin = input(f"Do you want to continue {name}")
+        if fin == "yes":
+            print(f"ok {name} thanks for continuing.")
+            raja()
+        elif fin == "no":
+            print(f"ok bye {name} hope you enjoyed this program ")
+            quit()
+        else:
+            print("pls write from the given")
+            final()
+    main2()
+    final() 
 raja()
