@@ -52,10 +52,11 @@ def raja():
         global a
         global b
         global operation
-        print("Addition")
-        print("Subtraction")
-        print("Multiplication")
-        print("Division")
+        print("1.Addition")
+        print("2.Subtraction")
+        print("3.Multiplication")
+        print("4.Division")
+        print("1,2,3,4")
         
         operation = input("what do you want to do:")
 
@@ -69,13 +70,13 @@ def raja():
             print(f"{a} ÷? {b} = {a/b}")
 
 
-        if operation == "Addition":
+        if operation == "Addition" or 1:
             main2Addition()
-        elif operation == "Subtraction":
+        elif operation == "Subtraction" or 2:
             main2Subtraction()
-        elif operation == "Multiplication":
+        elif operation == "Multiplication" or 3:
             main2Multiplication()
-        elif operation == "Division":
+        elif operation == "Division" or 4:
             main2Division()
         else:
             print("Pls write from the given")
