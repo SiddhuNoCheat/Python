@@ -1,7 +1,10 @@
+import os
+
 print("Hi This is coded by Siddhesh")
 
 a = "place holder"
 b = "place holder"
+name = "Dear Friend"
 
 
 def Introduction():
@@ -20,6 +23,7 @@ def Introduction():
 
 Introduction()
 
+os.system('clear')
 
 def raja():
     def main1():
@@ -46,6 +50,8 @@ def raja():
                 main1div2()
         main1div2()
     
+    os.system('clear')
+
     main1()
     
     def main2():
@@ -60,6 +66,8 @@ def raja():
         
         operation = input("what do you want to do:")
 
+        os.system('clear')
+
         def main2Addition():
             print(f"{a} + {b} = {a+b}")
         def main2Subtraction():
@@ -67,7 +75,7 @@ def raja():
         def main2Multiplication():
             print(f"{a} x {b} = {a*b}")
         def main2Division():
-            print(f"{a} ÷? {b} = {a/b}")
+            print(f"{a} ÷ {b} = {a/b}")
 
 
         if operation == "Addition" or 1:
@@ -81,14 +89,42 @@ def raja():
         else:
             print("Pls write from the given")
             main2()
+    
+    def con():
+        global a
+        global b
+        if operation == "Addition" or 1:
+            a = a + b
+        elif operation == "Subtraction" or 2:
+            a = a - b
+        elif operation == "Multiplication" or 3:
+            a = a*b
+        elif operation == "Division" or 4:
+            a = a/b
 
+        def condiv1():
+            global b
+            try:
+                b = input("Number 2 : ")
+                b = int(b)
+            except ValueError:
+                print(f"{b} is not an integer.")
+                condiv1()
+        condiv1()
+        main2()
+        final()
+    
     def final():
         global fin
         print("yes")
         print("no")
-        fin = input(f"Do you want to continue {name}")
+        print("start-over")
+        fin = input(f"Do you want to continue {name} :")
         if fin == "yes":
             print(f"ok {name} thanks for continuing.")
+            con()
+        elif fin == "start-over":
+            print(f"ok {name}")
             raja()
         elif fin == "no":
             print(f"ok bye {name} hope you enjoyed this program ")
@@ -96,6 +132,7 @@ def raja():
         else:
             print("pls write from the given")
             final()
+    os.system('clear')
     main2()
     final() 
 raja()
