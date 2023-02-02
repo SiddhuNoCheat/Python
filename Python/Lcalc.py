@@ -49,7 +49,7 @@ def quickmafs(string):
     global tw
     if (len(s)%2 == 0):
         print("if")
-        for i in range(1, int(len(s)/2)):
+        for i in range(0, int(len(s)/2)):
             tw += str(int(s[i]) + int(s[-i]))
             print(tw)
         i = 0
@@ -57,7 +57,7 @@ def quickmafs(string):
         tw = ""
     else:
         print("else")
-        for i in range(1, int(len(s)/2-0.5)):
+        for i in range(0, int(len(s)/2-0.5)):
             tw += str(int(s[i]) + int(s[-i]))
             print(tw)
         i = 0
